@@ -1,0 +1,42 @@
+FUNCTION dot_product(t1, t2:ARRAY_OF INTEGER) : INTEGER
+VAR
+    i:integer ;
+    ps : INTEGER:=0;
+BEGIN
+    FOR i FROM 0 TO t1.length-1 STEP 1   DO
+        ps=t1[i]*t2[i];
+    END_FOR
+    IF (ps == 0 )  THEN 
+    RETURN 1;
+    else
+    RETURN -1;
+    END_IF
+END
+ALGORITHM dot
+VAR
+    a, b :ARRAY_OF INTEGER ;
+    sum:INTEGER:=0 ;
+
+BEGIN
+FOR i FROM 0 TO a.length-1 STEP 1   DO
+    REPEAT
+        write ("enter a vector value")
+        read (a[i])
+    UNTIL (a[i]=Isinteger())
+    
+END_FOR
+FOR i FROM 0 TO b.length-1 STEP 1   DO
+    REPEAT
+        write ("enter a vector value")
+        read (b[i])
+    UNTIL (b[i]=Isinteger()])
+    
+END_FOR
+ sum := dot_product(a, b) ;
+
+ IF (sum==1) THEN
+     write("orthogonal vectors");    
+    else
+        write ("non orthogonal vectors");
+END_IF
+END
